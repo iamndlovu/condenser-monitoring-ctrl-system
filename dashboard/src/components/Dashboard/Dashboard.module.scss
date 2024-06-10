@@ -1,0 +1,58 @@
+.Dashboard {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 2rem;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    column-gap: 10px;
+
+    .sectionContainer {
+      border: 2px solid #808080;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+      box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5);
+      padding: 0.8rem;
+      position: relative;
+
+      &.ph {
+        grid-column: 1 / 20;
+        grid-row: 1 / -1;
+      }
+
+      &.dissolved {
+        grid-column: 27 / 49;
+        grid-row: 1 / 45;
+      }
+
+      &.conductivity {
+        grid-column: 53 / 75;
+        grid-row: 1 / 45;
+      }
+
+      &.extra {
+        grid-column: 23 / 79;
+        grid-row: 60 / -1;
+        box-shadow: none;
+      }
+
+      &.stats {
+        grid-column: 82 / -1;
+        grid-row: 1 / -1;
+        transition: all 0.5s ease-out;
+
+        &.fixed {
+          position: fixed;
+          width: 16%;
+          min-height: 87%;
+          left: 82%;
+        }
+      }
+    }
+  }
+}
